@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Image searcher</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/master.css') }}"/>
+    <script>
+        function videoSet() {
+            document.getElementsByClassName('form1')[0].style.display = 'inline-block';
+            document.getElementsByClassName('form2')[0].style.display = 'none';
+            document.getElementsByClassName('video')[0].disabled = true;
+            document.getElementsByClassName('image')[0].disabled = false;
+        }
+        function imageSet() {
+            document.getElementsByClassName('form1')[0].style.display = 'none';
+            document.getElementsByClassName('form2')[0].style.display = 'inline-block';
+            document.getElementsByClassName('video')[0].disabled = false;
+            document.getElementsByClassName('image')[0].disabled = true;
+        }
+    </script>
+</head>
+<body>
+    <div class="content">
+        <button class="video" onclick="videoSet()" disabled>Video</button>
+        <button class="image" onclick="imageSet()">Images</button>
+
+        <br /><br />
+        <div class="form form1">
+            <form method="post" enctype="multipart/form-data" action="/upload-video">
+                <input type="file" name="file" />
+                <div>Input FPS or pass, if you want to set default.</div>
+                <input type="number" name="fps" />
+                <div>Input Description for frame:</div>
+                <input type="text" name="discription" />
+                <div>Enter number of frames or pass if you want to set default 1</div>
+                <input type="number" name="count_top" />
+                <input class="btn" type="submit" value="Submit." />
+            </form>
+        </div>
+        <div class="form form2" style="display:none">
+            <form method="post" enctype="multipart/form-data" action="/upload-image">
+                <input type="file" name="file[]" multiple />
+                <div>Input description for image:</div>
+                <input type="text" name="discription" />
+                <div>Enter number of images or pass if you want to set default 1</div>
+                <input type="number" name="count_top" />
+                <input class="btn" type="submit" value="Submit." />
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>{{ resultPaths[0] }}</title>
+</head>
+<body>
+    {% for res in resultPaths %}
+        <img src="{{ url_for('static', filename=res) }}" />
+        <div>Probablity: {{ result[res] }}</div>
+        <div>Time-code: {{ res[14:-4] }}</div>
+
+    {% endfor %}
+</body>
+</html>

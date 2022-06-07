@@ -1,0 +1,84 @@
+body {
+    background-color: rgb(230, 240, 250);
+}
+
+.content {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-60%, -60%);
+    transform: translate(-60%, -60%);
+}
+
+button {
+    display: inline;
+    margin: 5px;
+    font-size: 20px;
+    font: italic;
+    color: #252528;
+    background-color: rgb(190, 200, 210);
+    border: 2px solid black;
+    border-radius: 3px;
+    box-shadow: #a0abb1 2px 2px;
+}
+
+    button:hover {
+        color: #252528;
+        background-color: rgb(205, 215, 225);
+        border: 2px solid black;
+        border-radius: 3px;
+        box-shadow: #a0abb1 2px 2px;
+    }
+
+    button:active {
+        color: #252528;
+        background-color: rgb(175, 185, 195);
+        border: 2px solid black;
+        border-radius: 3px;
+    }
+
+    button:disabled {
+        color: #252528;
+        background-color: rgb(100, 110, 120);
+        border: 2px solid black;
+        border-radius: 3px;
+    }
+
+input {
+    font: italic;
+    font-size: 16px;
+    color: #252528;
+    border: 2px solid black;
+    border-radius: 3px;
+}
+
+    input.btn {
+        background-color: rgb(190, 200, 210);
+        box-shadow: #a0abb1 2px 2px;
+    }
+
+        input.btn:hover {
+            background-color: rgb(205, 215, 225);
+            box-shadow: #a0abb1 2px 2px;
+        }
+
+        input.btn:active {
+            background-color: rgb(175, 185, 195);
+        }
+
+div {
+    font: italic;
+    font-size: 16px;
+    color: #252528;
+}
+
+    div.form {
+        display: inline-block;
+        padding: 10px;
+        margin: 5px;
+        background-color: rgb(205, 215, 225);
+        border: 2px solid black;
+        border-radius: 5px;
+        box-shadow: #a0abb1 3px 3px;
+    }
